@@ -20,3 +20,4 @@ Also, those modifications were added:
   - a description field added by user to exprime why grant its role
 + A new roles table containing an id and a name.
 + many to many relationship between users and roles table (replacing the role column in users table).
++ A contact table linked to a user. This serve as a storage for  contact form on site.

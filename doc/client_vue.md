@@ -12,3 +12,7 @@ on the personal data part, it needs a button "delete account" and "delete all pe
 ## role
 
 any user (except those with admin rights) has the power to ask a company role
+
+## Contact
+
+An identified user is able to use a contact form available on the website.
