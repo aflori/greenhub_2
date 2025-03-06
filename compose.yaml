@@ -1,0 +1,51 @@
+# this compose file is only coherent in dev or test mod
+# never use this one in prod (as in git repo)
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+    ports:
+      - 5432:5432
+
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: green_hub
+      POSTGERS_DB: green_hub
+
+    networks:
+    - db_network
+  
+  postgres-test:
+    image: postgres
+    restart: always
+
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+    ports:
+      - 5433:5432
+
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: green_hub
+      POSTGERS_DB: green_hub
+
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - db_network
+
+networks:
+  db_network:
+
+volumes:
+  db-data:
