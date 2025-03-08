@@ -24,9 +24,6 @@ services:
     image: postgres
     restart: always
 
-    volumes:
-      - db-data:/var/lib/postgresql/data
-
     ports:
       - 5433:5432
 

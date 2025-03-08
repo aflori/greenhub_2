@@ -2,13 +2,14 @@ import Config
 
 # Configure your database
 config :back, Back.Repo,
-  username: "postgres",
+  username: "green_hub",
   password: "postgres",
   hostname: "localhost",
-  database: "back_dev",
+  database: "green_hub",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
-  pool_size: 10
+  pool_size: 10,
+  migration_primary_key: [type: :uuid]
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
